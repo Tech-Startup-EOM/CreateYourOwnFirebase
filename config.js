@@ -10,7 +10,7 @@ const{
     HOST_URL,
     API_KEY,
     AUTH_DOMAIN,
-    DATABASE_URL,
+    //DATABASE_URL,
     PROJECT_ID,
     STORAGE_BUCKET,
     MESSAGIN_SENDER_ID,
@@ -27,7 +27,7 @@ module.exports = {
     firebaseConfig: {
         apiKey: API_KEY,
         authDomain: AUTH_DOMAIN,
-        databaseURL: DATABASE_URL,
+        //databaseURL: DATABASE_URL,
         projectId: PROJECT_ID,
         storageBucket: STORAGE_BUCKET,
         messagingSenderId: MESSAGIN_SENDER_ID,
