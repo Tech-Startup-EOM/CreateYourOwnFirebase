@@ -14,7 +14,7 @@ const addUser = async (req, res, next) => {
         */
         
         /*
-        *  create a document in firebase using your firestor 'user' collection (I don't expect you to know the command. Here it isawait firestore.collection(/* the collection that you are creating the document in */).doc().set(/* the body of the request */);)
+        *  create a document in firebase using your firestor 'user' collection (I don't expect you to know the command. Here it is: await firestore.collection(/* the collection that you are creating the document in */).doc().set(/* the body of the request */);)
         */
     }
     catch (error) {
@@ -22,6 +22,20 @@ const addUser = async (req, res, next) => {
         //res.status(400).send(error.message);
     }
 };
+
+const updateUser = async (req, res, next) => {
+    try {
+        // the id could be given in the link. For example: www.website.com/users/thisIsTheID
+        // You would access this id using req.params.id
+        
+        const user = await firebase.collection(/* the collection that the documents in */).doc(/* the id */);
+        await user.update(/* the data */);
+        res.send('User record updated successfully');
+    }
+    catch (error) {
+        res.status(400).send(error.message);
+    }
+}
 
 
 module.exports = {
